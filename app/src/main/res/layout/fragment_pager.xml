@@ -18,6 +18,7 @@
        app:tabMaxWidth="40dp"
        android:layout_gravity="center"
        app:tabGravity="center"
+       app:tabIndicatorColor="@color/colorWhite"
        />
 
 </LinearLayout>

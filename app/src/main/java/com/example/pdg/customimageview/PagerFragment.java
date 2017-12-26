@@ -49,12 +49,12 @@ public class PagerFragment extends Fragment {
                 }
             }
 
+            holder.viewPager.setAdapter(pagerAdapter);
             view.setTag(holder);
         } else {
             holder = (ViewHolder) view.getTag();
         }
 
-        holder.viewPager.setAdapter(pagerAdapter);
         holder.viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(holder.tabLayout));
         holder.tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
