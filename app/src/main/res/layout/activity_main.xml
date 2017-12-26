@@ -1,0 +1,25 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.example.pdg.customimageview.ZoomFrame
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/zoomFrame">
+
+        <com.example.pdg.customimageview.MapView
+            android:id="@+id/mapView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@mipmap/map_img"/>
+
+    </com.example.pdg.customimageview.ZoomFrame>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:id="@+id/button"/>
+
+
+</FrameLayout>
