@@ -1,25 +1,17 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/container"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <com.example.pdg.customimageview.ZoomFrame
+    <include
+        android:id="@+id/titlebar"
+        layout="@layout/titlebar"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/zoomFrame">
+        android:layout_height="55dp" />
 
-        <com.example.pdg.customimageview.MapView
-            android:id="@+id/mapView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:src="@mipmap/map_img"/>
-
-    </com.example.pdg.customimageview.ZoomFrame>
-
-    <Button
+    <FrameLayout
+        android:id="@+id/fragmentContainer"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:id="@+id/button"/>
+        android:layout_height="match_parent"/>
 
-
-</FrameLayout>
+</LinearLayout>
