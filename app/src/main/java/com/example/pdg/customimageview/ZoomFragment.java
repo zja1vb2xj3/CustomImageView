@@ -10,6 +10,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.github.chrisbanes.photoview.PhotoView;
+
 /**
  * Created by pdg on 2017-12-26.
  */
@@ -27,7 +29,7 @@ public class ZoomFragment extends Fragment {
             holder = new ViewHolder();
 
             holder.mapView = (MapView) view.findViewById(R.id.mapView);
-            holder.button = (Button) view.findViewById(R.id.button);
+//            holder.button = (Button) view.findViewById(R.id.button);
 
             view.setTag(holder);
         }
@@ -35,14 +37,14 @@ public class ZoomFragment extends Fragment {
             holder = (ViewHolder)view.getTag();
         }
 
-        holder.button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(view.getContext(), "버튼 클릭", Toast.LENGTH_SHORT).show();
-                mapViewSign = !mapViewSign;
-                holder.mapView.setMarkerSign(mapViewSign);
-            }
-        });
+//        holder.button.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Toast.makeText(view.getContext(), "버튼 클릭", Toast.LENGTH_SHORT).show();
+//                mapViewSign = !mapViewSign;
+//                holder.mapView.setMarkerSign(mapViewSign);
+//            }
+//        });
 
         return view;
     }

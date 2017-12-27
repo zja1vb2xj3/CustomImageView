@@ -15,6 +15,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
+import com.github.chrisbanes.photoview.PhotoView;
+
 import java.util.ArrayList;
 
 /**
@@ -87,20 +89,20 @@ public class PagerFragment extends Fragment {
         private TabLayout tabLayout;
     }
 
-    public class PagerAdapter extends android.support.v4.view.PagerAdapter {
+    private class PagerAdapter extends android.support.v4.view.PagerAdapter {
         @Override
         public Object instantiateItem(ViewGroup container, int position) {
             LinearLayout adapterLayout = new LinearLayout(container.getContext());
             adapterLayout.setOrientation(LinearLayout.VERTICAL);
-            ImageView imageView = new ImageView(container.getContext());
-            imageView.setImageBitmap(bitmaps.get(position));
+            PhotoView photoView = new PhotoView(container.getContext());
+            photoView.setImageBitmap(bitmaps.get(position));
 
             ViewGroup.LayoutParams layoutParams = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
-            imageView.setLayoutParams(layoutParams);
+            photoView.setLayoutParams(layoutParams);
 
-            container.addView(imageView);
+            container.addView(photoView);
 
-            return imageView;
+            return photoView;
         }
 
         @Override

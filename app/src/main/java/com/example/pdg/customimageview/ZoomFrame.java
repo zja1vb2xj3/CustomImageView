@@ -15,6 +15,7 @@ import android.widget.FrameLayout;
  */
 
 public class ZoomFrame extends FrameLayout implements ScaleGestureDetector.OnScaleGestureListener {
+
     private enum Mode {
         NONE,
         DRAG,
@@ -70,7 +71,7 @@ public class ZoomFrame extends FrameLayout implements ScaleGestureDetector.OnSca
                         mode = Mode.ZOOM;
                         break;
                     case MotionEvent.ACTION_POINTER_UP:
-                        mode = Mode.DRAG;
+                        mode = Mode.ZOOM;
                         break;
                     case MotionEvent.ACTION_UP:
                         Log.i(TAG, "UP");
@@ -125,8 +126,11 @@ public class ZoomFrame extends FrameLayout implements ScaleGestureDetector.OnSca
     }
 
     private void applyScaleAndTranslation() {
+        //줌
         child().setScaleX(scale);
         child().setScaleY(scale);
+
+        //드래그
         child().setTranslationX(dx);
         child().setTranslationY(dy);
     }

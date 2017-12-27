@@ -11,6 +11,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.github.chrisbanes.photoview.PhotoView;
+
 import java.util.ArrayList;
 
 
@@ -33,6 +35,7 @@ public class MainActivity extends Activity {
             Bitmap bitmap = BitmapFactory.decodeResource(getResources(),R.mipmap.ic_launcher);
             bitmaps.add(bitmap);
         }
+
 
         pagerFragment.setBitmaps(bitmaps);
     }

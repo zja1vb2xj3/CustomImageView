@@ -7,6 +7,9 @@ import android.graphics.Canvas;
 import android.graphics.Matrix;
 import android.util.AttributeSet;
 import android.util.Log;
+import android.widget.ImageView;
+
+import com.github.chrisbanes.photoview.PhotoView;
 
 /**
  * Created by pdg on 2017-12-22.
@@ -38,30 +41,9 @@ public class MapView extends android.support.v7.widget.AppCompatImageView {
 
         this.redMarker = resizeBitmapImage(redMarker, normalPinSize);
         this.blueMarker = resizeBitmapImage(blueMarker, normalPinSize);
-
     }
 
     public Bitmap resizeBitmapImage(Bitmap pin, int pinSize) {
-//        int width = source.getWidth();
-//        int height = source.getHeight();
-//        int newWidth = width;
-//        int newHeight = height;
-//        float rate = 0.0f;
-//
-//        if (width > height) {
-//            if (maxResolution < width) {
-//                rate = maxResolution / (float) width;
-//                newHeight = (int) (height * rate);
-//                newWidth = maxResolution;
-//            }
-//        } else {
-//            if (maxResolution < height) {
-//                rate = maxResolution / (float) height;
-//                newWidth = (int) (width * rate);
-//                newHeight = maxResolution;
-//            }
-//        }
-
         return Bitmap.createScaledBitmap(pin, pinSize, pinSize, true);
     }
 
